@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/FirstFragment"
+        android:icon="@drawable/ic_list"
+        android:title="@string/game_mode" />
+
+    <item
+        android:id="@+id/mapFragment"
+        android:icon="@drawable/ic_map"
+        android:title="@string/title_map" />
+
+    <item
+        android:id="@+id/primaryFragment"
+        android:icon="@drawable/ic_cosmetics"
+        android:title="@string/cosmetics"
+        />
+
+    <item
+        android:id="@+id/newsFragment"
+        android:icon="@drawable/ic_news"
+        android:title="@string/news" />
+
+    <item
+        android:id="@+id/accountFragment"
+        android:icon="@drawable/ic_account"
+        android:title="@string/account" />
+</menu>

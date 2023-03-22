@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:backgroundTint="@color/backgroundAppColor">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/detailScroll"
+            android:layout_height="wrap_content"
+            tools:context=".ui.detail.DetailFragment">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.33"/>
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:foreground="@drawable/gradient_for_images"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/maxTeams"
+                android:scaleType="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/spacing_default_6"
+                app:layout_constraintTop_toBottomOf="@id/image">
+
+                <TextView
+                    style="@style/itemDetailHeader"
+                    android:text="@string/name" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_marginStart="88dp"
+                    style="@style/itemDetailText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                <TextView
+                    style="@style/itemDetailHeader"
+                    android:text="@string/date" />
+
+                <TextView
+                    android:id="@+id/startDate"
+                    android:layout_marginStart="29dp"
+                    style="@style/itemDetailText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+                <TextView
+
+                    style="@style/itemDetailHeader"
+                    android:text="@string/maxPlayers" />
+
+                <TextView
+                    android:id="@+id/maxPlayers"
+                    android:layout_marginStart="32dp"
+                    style="@style/itemDetailText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                <TextView
+                    style="@style/itemDetailHeader"
+                    android:text="@string/gameType" />
+
+                <TextView
+                    android:id="@+id/gameType"
+                    android:layout_marginStart="50dp"
+                    style="@style/itemDetailText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+                <TextView
+                    style="@style/itemDetailHeader"
+                    android:text="@string/ratingType" />
+
+                <TextView
+                    android:id="@+id/ratingType"
+                    android:layout_marginStart="38dp"
+                    style="@style/itemDetailText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/linearLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                <TextView
+                    style="@style/itemDetailHeader"
+                    android:text="@string/description" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_marginStart="36dp"
+                    style="@style/itemDetailText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+                <TextView
+                    style="@style/itemDetailHeader"
+                    android:text="@string/minPlayers" />
+
+                <TextView
+                    android:id="@+id/minPlayers"
+                    android:layout_marginStart="36dp"
+                    style="@style/itemDetailText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <TextView
+                    style="@style/itemDetailHeader"
+                    android:text="@string/maxTeams" />
+
+                <TextView
+                    android:id="@+id/maxTeams"
+                    android:layout_marginStart="45dp"
+                    style="@style/itemDetailText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+
+                <TextView
+                    style="@style/itemDetailHeader"
+                    android:text="@string/maxTeamSize" />
+
+                <TextView
+                    android:id="@+id/maxTeamSize"
+                    android:layout_marginStart="20dp"
+                    style="@style/itemDetailText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+                <TextView
+                    style="@style/itemDetailHeader"
+                    android:text="@string/maxSquads" />
+
+                <TextView
+                    android:id="@+id/maxSquads"
+                    android:layout_marginStart="37dp"
+                    style="@style/itemDetailText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
+
+                <TextView
+                    style="@style/itemDetailHeader"
+                    android:text="@string/maxSquadSize" />
+
+                <TextView
+                    android:id="@+id/maxSquadSize"
+                    android:layout_marginStart="11dp"
+                    style="@style/itemDetailText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
+
+                <TextView
+                    style="@style/itemDetailHeader"
+                    android:text="@string/isTournament" />
+
+                <TextView
+                    android:id="@+id/isTournament"
+                    android:layout_marginStart="32dp"
+                    style="@style/itemDetailText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout12">
+
+                <TextView
+                    style="@style/itemDetailHeader"
+                    android:text="@string/isLimitedTimeMode" />
+
+                <TextView
+                    android:id="@+id/isLimitedTimeMode"
+                    android:layout_marginStart="36dp"
+                    style="@style/itemDetailText" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/loading_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/error_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

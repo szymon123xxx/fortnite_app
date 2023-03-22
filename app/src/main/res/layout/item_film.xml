@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:id="@+id/clickableConstraintLayout"
+    android:background="@color/backgroundAppColor">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="@dimen/spacing_default_5"
+        android:layout_marginTop="@dimen/spacing_default_3"
+        android:layout_marginBottom="@dimen/spacing_default_3"
+        android:layout_marginEnd="@dimen/spacing_default_5"
+        android:backgroundTint="@color/itemNewsBackgroundColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="@dimen/spacing_default_6">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/numberOfPlaylist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/containerOfImage"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_big"
+                tools:text="1"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/containerOfImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeWidth="1dp"
+                app:shapeAppearanceOverlay="@style/RoundedImageView"
+                android:backgroundTint="@color/transparent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="@dimen/spacing_default_9" >
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:foreground="@drawable/gradient_for_images"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/textContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/containerOfImage"
+                app:layout_constraintTop_toTopOf="@id/containerOfImage"
+                android:layout_marginStart="130dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginEnd="@dimen/spacing_default_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    tools:text="Squad Game"/>
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    tools:text="2022-03-20"/>
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    tools:text="Backpack"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/containerOfImage"
+                app:layout_constraintTop_toBottomOf="@id/textContent"
+                android:layout_marginStart="130dp"
+                android:paddingTop="@dimen/spacing_default_1"
+                android:paddingEnd="@dimen/spacing_default_3"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/firstTagsContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/white"
+                    android:visibility="invisible"
+                    app:strokeWidth="0.8dp"
+                    app:cardCornerRadius="@dimen/spacing_default_3"
+                    android:backgroundTint="@color/itemNewsBackgroundColor">
+
+                    <TextView
+                        android:id="@+id/firstTag"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:lines="1"
+                        tools:text="IndigoBird"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/secondTagContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="0.8dp"
+                    android:layout_marginStart="@dimen/spacing_default_2"
+                    app:cardCornerRadius="@dimen/spacing_default_3"
+                    android:backgroundTint="@color/itemNewsBackgroundColor">
+
+                    <TextView
+                        android:id="@+id/secondTag"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:lines="1"
+                        tools:text="IndigoBird"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/thirdTagContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="0.8dp"
+                    android:visibility="gone"
+                    android:layout_marginStart="@dimen/spacing_default_2"
+                    app:cardCornerRadius="@dimen/spacing_default_3"
+                    android:backgroundTint="@color/itemNewsBackgroundColor">
+
+                    <TextView
+                        android:id="@+id/thirdTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:lines="1"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        tools:text="IndigoBird"/>
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

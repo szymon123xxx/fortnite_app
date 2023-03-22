@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="itemDetailHeader">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">@dimen/text_size_big</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="itemDetailText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginStart">@dimen/spacing_default_6</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">@dimen/text_size_default</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="itemMainHeader">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="itemMainText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">3dp</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="RoundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/details_rounded_image_view_corner_radius</item>
+    </style>
+
+    <style name="RoundedImageViewForNews">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/details_rounded_image_view_corner_radius</item>
+        <item name="cornerSizeTopLeft">@dimen/details_rounded_image_view_corner_radius</item>
+    </style>
+    
+    <style name="CustomTabStyle" parent="TextAppearance.Design.Tab" >
+        <item name="android:textSize">10sp</item>
+    </style>
+
+
+    <style name="PopupMenuStyle" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:itemBackground">@color/orange</item>
+        <item name="android:popupBackground">@drawable/background_for_popup_menu</item>
+    </style>
+</resources>

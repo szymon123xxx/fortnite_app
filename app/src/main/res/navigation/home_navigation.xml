@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.inzynierkaApp.app.sample.ui.home.HomeFragment"
+        android:label="@string/home_fragment_name"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_FirstFragment_to_detailFragment"
+            app:destination="@id/detailFragment">
+            <argument
+                android:name="modeId"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.inzynierkaApp.app.sample.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="modeId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.inzynierkaApp.app.sample.ui.map.MapFragment"
+        android:label="MapFragment"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/primaryFragment"
+        android:name="com.inzynierkaApp.app.sample.ui.cosmetics.PrimaryFragment"
+        android:label="PrimaryFragment"
+        tools:layout="@layout/fragment_primary" >
+        <action
+            android:id="@+id/action_primaryFragment_to_infoCosmeticsFragment"
+            app:destination="@id/infoCosmeticsFragment" />
+        <argument
+            android:name="allCosmeticId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoCosmeticsFragment"
+        android:name="com.inzynierkaApp.app.sample.ui.cosmetics.infocosmetics.InfoCosmeticsFragment"
+        android:label="InfoCosmeticsFragment"
+        tools:layout="@layout/fragment_info_cosmetics" >
+        <argument
+            android:name="allCosmeticId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.inzynierkaApp.app.sample.ui.news.NewsFragment"
+        android:label="NewsFragment"
+        tools:layout="@layout/fragment_news"/>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.inzynierkaApp.app.sample.ui.account.AccountFragment"
+        android:label="AccountFragment"
+        tools:layout="@layout/fragment_account">
+        <action
+            android:id="@+id/action_accountFragment_to_accountOverallFragment"
+            app:destination="@id/accountOverallFragment" >
+            <argument
+                android:name="userName"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/accountOverallFragment"
+        android:name="com.inzynierkaApp.app.sample.ui.account.overall.AccountOverallFragment"
+        android:label="AccountOverallFragment"
+        tools:layout="@layout/fragment_account_overall">
+        <argument
+            android:name="userName"
+            app:argType="string" />
+    </fragment>
+</navigation>

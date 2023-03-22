@@ -1,0 +1,39 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_content_normal">24dp</dimen>
+    <dimen name="item_playlist_corner_radius">20dp</dimen>
+
+
+    <!-- Margins/paddings -->
+    <dimen name="spacing_default_0">1dp</dimen>
+    <dimen name="spacing_default_1">2dp</dimen>
+    <dimen name="spacing_default_2">4dp</dimen>
+    <dimen name="spacing_default_3">8dp</dimen>
+    <dimen name="spacing_default_4">12dp</dimen>
+    <dimen name="spacing_default_5">16dp</dimen>
+    <dimen name="spacing_default_6">24dp</dimen>
+    <dimen name="spacing_default_7">32dp</dimen>
+    <dimen name="spacing_default_8">40dp</dimen>
+    <dimen name="spacing_default_9">48dp</dimen>
+    <dimen name="spacing_default_10">64dp</dimen>
+    <dimen name="spacing_default_11">120dp</dimen>
+
+    <!-- Text size-->
+    <dimen name="text_size_little">8sp</dimen>
+    <dimen name="text_size_small">10sp</dimen>
+    <dimen name="text_size_default">12sp</dimen>
+    <dimen name="text_size_big">14sp</dimen>
+    <dimen name="text_size_subtitle">16sp</dimen>
+    <dimen name="text_size_title_small">18sp</dimen>
+    <dimen name="text_size_title">20sp</dimen>
+    <dimen name="text_size_title_big">28sp</dimen>
+    <dimen name="text_size_timer">32sp</dimen>
+    <dimen name="text_size_headline">50sp</dimen>
+    <dimen name="text_size_highlights_title_medium">36sp</dimen>
+    <dimen name="text_size_highlights_title_big">48sp</dimen>
+
+    <!-- Bottom Navigation Bar-->
+    <dimen name="bottom_navigation_height">56dp</dimen>
+
+    <dimen name="details_rounded_image_view_corner_radius">20dp</dimen>
+</resources>
