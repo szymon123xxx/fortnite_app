@@ -1,0 +1,28 @@
+buildscript {
+    apply from: 'gradle/shared_dependencies.gradle'
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$android_gradle"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+        classpath "com.google.gms:google-services:$google_services"
+        classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detekt_version"
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.1.2' apply false
+    id 'com.android.library' version '7.1.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.7.0' apply false
+
+}
+
+
+allprojects {
+    apply plugin: 'io.gitlab.arturbosch.detekt'
+}
